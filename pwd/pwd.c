@@ -1,6 +1,6 @@
 #include <errno.h>  // errno
 #include <stdio.h>  // printf
-#include <stdlib.h> // EXIT_SUCCESS
+#include <stdlib.h> // EXIT_SUCCESS, EXIT_FAILURE
 #include <string.h> // strerror
 #include <unistd.h> // getcwd
 
