@@ -10,6 +10,7 @@ int main(void) {
 
     if (!getcwd(buf, n)) {
         printf("%s.\n", strerror(errno));
+        
         free(buf);
         return EXIT_FAILURE;
     }
