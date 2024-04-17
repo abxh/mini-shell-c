@@ -1,22 +1,17 @@
 #include <errno.h>  // errno
-#include <stdio.h>  // printf
+#include <stdio.h>  // printf, fprintf, stderr
 #include <stdlib.h> // EXIT_SUCCESS, EXIT_FAILURE
 #include <string.h> // strerror
 #include <unistd.h> // getcwd
 
 int main(void) {
-    size_t n = 4096;
-    char* buf = malloc(n);
+    char buf[1024] = {0};
 
-    if (!getcwd(buf, n)) {
-        printf("%s.\n", strerror(errno));
-        
-        free(buf);
+    if (getcwd(buf, sizeof(buf)) == NULL) {
+        fprintf(stderr, "%s.\n", strerror(errno));
         return EXIT_FAILURE;
     }
 
     printf("%s\n", buf);
-
-    free(buf);
     return EXIT_SUCCESS;
 }
