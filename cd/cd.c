@@ -4,7 +4,8 @@
 #include <string.h> // strerror
 #include <unistd.h> // getcwd
 
-// cannot change shell pwd - so does not do anything purposeful than being a proof-of-concept:
+// cannot change shell working directory - so does not do anything
+// purposeful than being a proof-of-concept:
 // https://stackoverflow.com/questions/42340588/why-isnt-chdir-working
 
 // see alternatives to environ:
