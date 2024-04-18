@@ -5,8 +5,9 @@
 #include <stdlib.h>       // EXIT_SUCCESS, EXIT_FAILURE
 #include <string.h>       // strerror
 #include <sys/stat.h>     // stat
-#include <time.h>
-#include <unistd.h> // getcwd
+#include <unistd.h>       // getcwd
+
+// todo: fix dependency comments.
 
 // better explained in:
 // https://stackoverflow.com/questions/64815056/opening-files-in-a-directory-with-opendir-and-readdir-in-c
